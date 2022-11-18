@@ -5,6 +5,10 @@ import Container from 'react-bootstrap/Container';
 
 const Cart = ({cartItems, handleAddProduct, handleRemoveProduct,handleCartClearance}) => {
     const totalPrice = cartItems.reduce((price,item) => price + item.quntity * item.price,0);
+
+
+
+
   return (
     <Container>
         <div className='clear-cart-txt'>
@@ -54,8 +58,8 @@ const Cart = ({cartItems, handleAddProduct, handleRemoveProduct,handleCartCleara
                                 </div>
                             </div>
                             <div className='check-out-btn'>
-                                <button className='check-btn'>Continue Shopping</button>
-                                <button className='check-btn'>Checkout</button>
+                                <button className='check-btn' >Continue Shopping</button>
+                                <button className='check-btn' >Checkout</button>
                             </div>
         </div>
     </Container>

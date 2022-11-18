@@ -25,13 +25,13 @@ const data = {
                     image:"../images/shirt4.jpg"
                  },
                  {
-                    id: "4",
+                    id: "5",
                     name: "Jeans",
                     price: 2100,
                     image:"../images/shirt4.jpg"
                  },
                  {
-                    id: "4",
+                    id: "6",
                     name: "Jeans",
                     price: 2100,
                     image:"../images/shirt4.jpg"

@@ -3,137 +3,112 @@ import { Col, Container, Row } from 'react-bootstrap';
 import Form from 'react-bootstrap/Form';
 import ListGroup from 'react-bootstrap/ListGroup';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLocationDot, faPhone,  } from '@fortawesome/free-solid-svg-icons';
+import { faLocationDot, faPhone, } from '@fortawesome/free-solid-svg-icons';
 import { faFacebookF, faTwitter, faGooglePlusG } from '@fortawesome/free-brands-svg-icons';
 
 
+import { products } from '../back/Data/BlogProducts';
 
 
 
 export default function Footer() {
-  return (
-    <div>
-     
+    return (
+
+
         <div className="footer-contains container-fluid px-0 mx-0 g-0">
-         
+
             <Container>
-                <Row>
-                    <Col md = {3} col sm = {12}>
+                <Row >
+                    <Col md={3} col sm={12} className="prod-row" >
                         <div className="footer-logo-sec">
-                            <img src ="../images/footer-logo.png" alt='' width = "217"/>
-                            <p>Lorem ipsum dolor sit amet, 
-                                consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore</p>
-                            <div className="add-details-sec">
-                                <ListGroup>
-                                    <ListGroup.Item>
-                                        <FontAwesomeIcon icon={faLocationDot}></FontAwesomeIcon>
-                                        <a href='#'>40 Baria Sreet, NewYork City, US</a>
-                                    </ListGroup.Item>
-                                    <ListGroup.Item>
-                                        <FontAwesomeIcon icon={faPhone}></FontAwesomeIcon>
-                                        <a href='#'>001-1234-88888</a>
-                                    </ListGroup.Item>
-                                    <ListGroup.Item>
-                                        <FontAwesomeIcon icon={faPhone}></FontAwesomeIcon>
-                                        <a href='#'>info.deercreative@gmail.com</a>
-                                    </ListGroup.Item>
-                                </ListGroup>
-                            </div>
+                            <h5>Best-Selling Products</h5>
+
+                            {
+                                products.slice(0,6).map((prod)=>(
+                                    <Row className="prod-row">
+                                        <Col className='prod-image'>
+                                        <img src={prod.image} alt={prod.name}/>
+                                        </Col>
+                                        <Col>
+                                        <h6>{prod.name}</h6>
+                                        <p>${prod.price}</p>
+                                        </Col>
+                                    </Row>
+                                ))
+                            }
+
+                            
                         </div>
                     </Col>
-                    <Col md = {3} col sm = {12}>
-                        <div className="footer-links-details">
-                            <h5>Our Links</h5>
-                            <ListGroup>
-                                <ListGroup.Item action href="#link1">
-                                    Home
-                                </ListGroup.Item>
-                                <ListGroup.Item action href="#link1">
-                                    News
-                                </ListGroup.Item>
-                                <ListGroup.Item action href="#link1">
-                                    About Us
-                                </ListGroup.Item>
-                                <ListGroup.Item action href="#link1">
-                                   Shop
-                                </ListGroup.Item>
-                                <ListGroup.Item action href="#link1">
-                                   Services 
-                                </ListGroup.Item>
-                                <ListGroup.Item action href="#link1">
-                                   Contact
-                                </ListGroup.Item>
-                                <ListGroup.Item action href="#link1">
-                                    Pages
-                                </ListGroup.Item>
-                                <ListGroup.Item action href="#link1">
-                                   Support
-                                </ListGroup.Item>
-                                <ListGroup.Item action href="#link1">
-                                    Projects
-                                </ListGroup.Item>
-                                <ListGroup.Item action href="#link1">
-                                   Careers 
-                                </ListGroup.Item>
-                            </ListGroup>
+                    <Col md={3} col sm={12} className="prod-row" >
+                        <div className="footer-logo-sec">
+                            <h5>Limited-Time Offers</h5>
+
+                            {
+                                products.slice(0,6).map((prod)=>(
+                                    <Row className="prod-row">
+                                        <Col className='prod-image'>
+                                        <img src={prod.image} alt={prod.name}/>
+                                        </Col>
+                                        <Col>
+                                        <h6>{prod.name}</h6>
+                                        <p>${prod.price}</p>
+                                        </Col>
+                                    </Row>
+                                ))
+                            }
+
+                            
                         </div>
                     </Col>
-                    <Col md = {3} col sm = {12}>
+
+
+            
+                    <Col md={3} col sm={12}>
                         <div className="footer-links-details">
-                            <h5>Recent News</h5> 
+                            <h5>Archieves</h5>
                             <div className="news-details">
-                                <p>Colombia Gets a Business Makeover</p>
-                                <p>Colombia Gets a Business Makeover</p>
+                                <ul>
+                                    <li>November 2022</li>
+                                    <li>October 2022</li>
+                                    <li>September 2022</li>
+                                    <li>August 2022</li>
+                                    <li>July 2022</li>
+                                    <li>June 2022</li>
+                                    <li>April 2022</li>
+                                    <li>March 2022</li>
+                                    <li>February 2022</li>
+                                    <li>January 2022</li>
+                                    <li>December 2021</li>
+                                    <li>November 2021</li>
+                                    <li>October 2021</li>
+                                    <li>September 2021</li>
+                                    <li>August 2021</li>
+                                    <li>July 2021</li>
+                                  
+                                   
+                                </ul>
                             </div>
-                        </div>  
+                        </div>
                     </Col>
-                    <Col md = {3} col sm = {12}>
+                    <Col md={3} col sm={12}>
                         <div className="footer-links-details">
-                            <h5>Newsletter</h5> 
-                            <div className="news-sletter">
-                                <p>Subscribe our newsletter gor get noti-fication about new updates, etc.</p>
-                                <Form>
-                                    <Col>
-                                        <Form.Control placeholder="Enter Your Email" />
-                                    </Col>
-                                </Form>   
-                                <div className="footer-btn">
-                                    {/* <Button>Subscrib</Button> */}
-                                </div>
+                            <h5>Meta</h5>
+                            <div className="news-details">
+                            <ul>
+                                    <li>Log In</li>
+                                    <li>Entries RSS</li>
+                                    <li>Comments RSS</li>
+                                </ul>
                             </div>
-                        </div>  
+                        </div>
                     </Col>
-                </Row>   
-            </Container>
-        </div> 
-        <div className="footer-bottom">
-            <Container>
-                <div className="footer-bottom-details">
-                    <div className="copy-text">@2017 Themesflat. All rights reserved.</div>
-                    <div className="social-icon">
-                        <ul>
-                            <li>
-                                <a herf="#!">
-                                    <FontAwesomeIcon icon={ faFacebookF }></FontAwesomeIcon>
-                                </a>
-                            </li>
-                            <li>
-                                <a herf="#!">
-                                    <FontAwesomeIcon icon={ faTwitter }></FontAwesomeIcon>
-                                </a>
-                            </li>
-                            <li>
-                                <a herf="#!">
-                                    <FontAwesomeIcon icon={ faGooglePlusG }></FontAwesomeIcon>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+                </Row>
             </Container>
         </div>
-       
-    </div>
 
-  )
+
+
+
+    )
 }

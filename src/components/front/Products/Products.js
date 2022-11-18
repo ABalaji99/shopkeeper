@@ -11,7 +11,7 @@ import { Button } from 'react-bootstrap';
 
 const Products = ({ productItems, handleAddProduct }) => {
 
-    const checkOut= useNavigate()
+
     return (
         <Container fluid className='px-0 py-5 my-2 mx-0'>
             <div className='products-section py-1'>

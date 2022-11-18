@@ -348,14 +348,23 @@ banner-left-txt{
   color: #ebebeb;
 }
 
+.product-title p button{
+  border: none;
+  outline: none;
+  background: none;
+  color: #0f3661;
+  font-weight: 700;
+}
+
 
 /* footer start here  */
 
 .footer-contains{
-  background-color: #0d2034;
+  background-color: #000000;
     padding: 71px 0px 54px;
     color: #B5B7D2;
     font-size: 14px;
+    margin-top: 60px;
 }
 .list-group{
   border: none;
@@ -454,7 +463,34 @@ margin-left: 10px;
   align-items: center;
   justify-content: space-between;
 }
+
+.footer-logo-sec h5{
+  color: #ffff;
+}
+
+.footer-logo-sec .prod-image img{
+  width: 80px;
+  height: 8vh;
+ object-fit: fill;
+}
  
+.footer-logo-sec .prod-row{
+ height: 10vh;
+ border: 1px solid rgb(18, 18, 18);
+ background: rgb(14, 14, 14);
+ width: 70%;
+ padding: 10px 0;
+}
+
+
+.news-details ul{
+  padding-left: 0;
+  list-style-type: disc;
+}
+
+.news-details ul li{
+  margin-bottom: 5px;
+}
 
 /* products-details css start here  */
 .products-details .card-details {
@@ -495,17 +531,17 @@ margin-left: 10px;
   transition: all 0.5s ease;
 }
 .products-details button.product-add-btn {
-    background: #ff4c3b;
+    background: #1427f9;
     font-size: 12px;
     color: #ffff;
     padding: 6px;
-    border: 1px solid #ff4c3b;
+    border: 1px solid #1427f9;
     border-radius: 3px;
 }
 .products-details button.product-add-btn:hover {
   background: #ffff;
-  color: #ff4c3b;
-  border: 1px solid #ff4c3b;
+  color: #1427f9;
+  border: 1px solid #1427f9;
 }
 .product-add-btn svg{
   padding-right: 10px;
@@ -528,6 +564,10 @@ margin-left: 10px;
     border-top: 0;
     text-align: center;
     padding: 0 0.75rem 0.75rem 0.75rem;
+}
+
+.blog-details .carousel{
+  box-shadow:  none !important;
 }
 .cart-item-img{
   height: 90px;
