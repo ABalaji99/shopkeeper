@@ -13,7 +13,9 @@ import { faFacebookF, faTwitter, faGooglePlusG } from '@fortawesome/free-brands-
 export default function Footer() {
   return (
     <div>
-        <div className="footer-contains">
+     
+        <div className="footer-contains container-fluid px-0 mx-0 g-0">
+         
             <Container>
                 <Row>
                     <Col md = {3} col sm = {12}>
@@ -130,6 +132,8 @@ export default function Footer() {
                 </div>
             </Container>
         </div>
+       
     </div>
+
   )
 }

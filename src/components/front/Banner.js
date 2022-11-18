@@ -1,11 +1,14 @@
-import Container from 'react-bootstrap/Container';
+
 import Carousel from 'react-bootstrap/Carousel';
+import { Container } from 'react-bootstrap';
 
 
 export default function banner() {
   return (
     <>  
+ 
     <div className='banner-slide'>
+    <Container>
     <Carousel>
       <Carousel.Item>
         <img
@@ -67,10 +70,11 @@ export default function banner() {
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
+    </Container>   
     </div>
         
        
-        
+ 
     </>
     
   )
