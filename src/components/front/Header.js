@@ -8,6 +8,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faTwitter, faGooglePlusG } from '@fortawesome/free-brands-svg-icons';
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
+import { GiRss } from 'react-icons/gi';
+import {FaFacebookF ,FaTwitter ,FaVideo ,FaPinterestP ,FaGooglePlusG ,FaConnectdevelop ,FaLinkedinIn ,FaYoutubeSquare} from 'react-icons/fa';
 
 const Header = ({ cartItems }) => {
     return (
@@ -20,11 +22,11 @@ const Header = ({ cartItems }) => {
 
                                 <Col sm={6} md={7}>
                                     <div className="header-top-left">
-                                        <p className="info-text">Welcome to Our shop</p>
+                                        <p className="info-text">OPTIONAL TOP NAVIGATION</p>
                                     </div>
                                 </Col>
                                 <Col sm={6} md={5}>
-                                    <div className="header-top-right">
+                                    {/* <div className="header-top-right">
                                         <div className="lang-details">
                                             <Dropdown>
                                                 <Dropdown.Toggle variant="success" id="dropdown-basic" className='drop-name'>
@@ -59,7 +61,22 @@ const Header = ({ cartItems }) => {
                                             </ul>
                                         </div>
 
-                                    </div>
+                                    </div> */}
+
+                                    <GiRss size={20} pe-5/>
+                                    <FaFacebookF size={20} pe-5/>
+                                    <FaTwitter size={20} pe-5/>
+                                    <FaVideo size={20} pe-5/>
+                                    <FaPinterestP size={20} pe-5/>
+                                    <FaGooglePlusG size={20} pe-5/>
+                                    <FaConnectdevelop size={20} pe-5/>
+                                    <FaLinkedinIn size={20} pe-5/>
+                                    <FaYoutubeSquare size={20} pe-5/>
+
+
+
+
+
                                 </Col>
                             </Row>
                         </Container>
@@ -71,7 +88,7 @@ const Header = ({ cartItems }) => {
                             <Col sm={6} lg={3}>
                                 <div className="header-logo">
                                     <Link to="/">
-                                        <img src="images/header-logo.png" alt="" />
+                                        WP-SHOPKEEPER
                                     </Link>
                                 </div>
                             </Col>
@@ -83,26 +100,30 @@ const Header = ({ cartItems }) => {
                                             <Nav className="me-auto my-2 my-lg-0" style={{ maxHeight: '100px' }} navbarScroll>
                                                 <ul>
                                                     <li>
-                                                        <Link to="/">Home</Link>
+                                                        <Link to="/">HOME</Link>
                                                     </li>
                                                     <li>
-                                                        <Link to="/">Feature</Link>
+                                                        <Link to="/">SHOP DEMO</Link>
                                                     </li>
                                                     <li>
-                                                        <Link to="/">Shop</Link>
+                                                        <Link to="/">BLOG</Link>
                                                     </li>
                                                     <li>
-                                                        <Link to="/">Product</Link>
+                                                        <Link to="/">TEMPLATES</Link>
                                                     </li>
                                                     <li>
-                                                        <Link to="/">Page</Link>
+                                                        <Link to="/">LAYOUTS</Link>
                                                     </li>
+                                                    <li>
+                                                        <Link to="/">THEME FEATURES</Link>
+                                                    </li>
+                                                   
                                                 </ul>
                                             </Nav>
                                             <div className="cart-details">
 
-                                                <Link to="/cart" className='cart'>
-                                                    <FontAwesomeIcon icon={faCartShopping}></FontAwesomeIcon>
+                                                <Link to="/cart" className='cart' title='CART'>
+                                                   BUY NOW
                                                     <span className='cart-lenght'>
                                                         {cartItems.lenght === 0 ? "" : cartItems.lenght}
                                                     </span>

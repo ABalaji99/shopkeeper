@@ -10,14 +10,19 @@ import { Card } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
 
 const Products = ({ productItems, handleAddProduct }) => {
+
+    const checkOut= useNavigate()
     return (
+        <Container fluid className='px-0 py-5 my-2 mx-0'>
+            <div className='products-section py-1'>
+                
+       
         <Container>
             <div className='product-all'>
                 <div className='product-title'>
-                    <h4>special offer</h4>
-                    <h2 className="title-inner1">top collection</h2>
-                    <p className="text-center">Lorem Ipsum is simply dummy text of the printing and typesetting
-                        industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                    <h2>Check out our Best-Selling Products</h2>
+                   
+                    <p className="text-center">Find out more great stuff in our <button type="button">Online Shop</button>
                     </p>
                 </div>
                 <div className='products-details'>
@@ -49,7 +54,7 @@ const Products = ({ productItems, handleAddProduct }) => {
 
 
 
-                        {productItems.map((productItems) =>
+                        {productItems.slice(0,4).map((productItems) =>
                             <Col key={productItems.name}>
                                 <Card style={{ width: '18rem' }}>
                                     <Card.Img variant="top" src={productItems.image} alt={productItems.name}/>
@@ -75,7 +80,9 @@ const Products = ({ productItems, handleAddProduct }) => {
 
             </div>
         </Container>
-
+        </div>
+        </Container>
+        
     );
 }
 
